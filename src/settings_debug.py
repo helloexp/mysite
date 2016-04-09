@@ -23,9 +23,8 @@ SECRET_KEY = '72ydogkuj$le96qx)pjl6z^c6^$(^tbk%h&_$j(b=!5b+46*q7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = []
 
 ADMINS = (
     ('yytang', 'tangyuanyuan1208@126.com'),
