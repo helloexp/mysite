@@ -14,7 +14,7 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from vulnerability import views
 
@@ -23,15 +23,20 @@ urlpatterns = [
     # url(r'^indexS/$', admin.site.urls),
     url(r'^index/$', views.index),
     url(r'^vulnerability/$', views.vulnerability),
-    url(r'^vulnerability/search/$', views.search),
+    url(r'^vulnerability/searchAdvanced/$', views.searchAdvanced),
     url(r'^vulnerability/importBatch/$', views.importBatch),
-    url(r'^vulnerability/add/$',views.addVulnerability),
-    url(r'^vulnerability/edit/\??$',views.editVulnerability),
-    url(r'^vulnerability/add/result/$',views.add_Save),
+    url(r'^vulnerability/add/$', views.addVulnerability),
+    url(r'^vulnerability/edit/\??$', views.editVulnerability),
+    url(r'^vulnerability/add/result/$', views.add_Save),
     url(r'^login/$', views.login),
-    url(r'^registration/$', views.registration),
+    # url(r'^registration/$', views.registration),
     url(r'^forum/$', views.forum),
     url(r'^detail/$', views.detail_vul),
-    url(r'^search/\??$',views.search_vul),
-    url(r'^test2/$',views.display_meta),
+    url(r'^search/\??$', views.search_vul),
+    url(r'^test2/$', views.display_meta),
+    url(r'^accounts/logout/$', views.logout),
+    url(r'^registration/$', views.registration),
+    url(r'^NVDlist/$', views.vulnerability),
+    url(r'^Patchlist/$', views.vulnerability),
+    url(r'^Reuselist/$', views.vulnerability),
 ]

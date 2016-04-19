@@ -22,10 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '72ydogkuj$le96qx)pjl6z^c6^$(^tbk%h&_$j(b=!5b+46*q7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 ADMINS = (
     ('yytang', 'tangyuanyuan1208@126.com'),
@@ -53,7 +52,6 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
@@ -83,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'news',
         'USER': 'root',
-        'PASSWORD': '321',
+        'PASSWORD': '123321',
         'HOST': '',
         'PORT': '',
     }
