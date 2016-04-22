@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^indexS/$', admin.site.urls),
     url(r'^index/$', views.index),
-    url(r'^vulnerability/$', views.vulnerability),
+    url(r'^vulnerability/NVDlist/$', views.vulnerabilityNVD),
     url(r'^vulnerability/searchAdvanced/$', views.searchAdvanced),
     url(r'^vulnerability/importBatch/$', views.importBatch),
     url(r'^vulnerability/add/$', views.addVulnerability),
@@ -36,7 +36,11 @@ urlpatterns = [
     url(r'^test2/$', views.display_meta),
     url(r'^accounts/logout/$', views.logout),
     url(r'^registration/$', views.registration),
-    url(r'^NVDlist/$', views.vulnerability),
-    url(r'^Patchlist/$', views.vulnerability),
-    url(r'^Reuselist/$', views.vulnerability),
+    url(r'^NVDlist/$', views.vulnerabilityNVD),
+    url(r'^vulnerability/Patchlist/$', views.vulnerabilityPatch),
+    url(r'^vulnerability/Reuselist/$', views.vulnerabilityReuse),
+    url(r'^vulnerability/aboutFeature/$', views.featureShow),
+    url(r'^diffInfo/$', views.diffInfoShow),
+    url(r'^download/$', views.download),
+    
 ]
