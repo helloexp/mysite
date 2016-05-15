@@ -24,13 +24,11 @@ urlpatterns = [
     url(r'^index/$', views.index),
     url(r'^vulnerability/NVDlist/$', views.vulnerabilityNVD),
     url(r'^vulnerability/searchAdvanced/$', views.search_advanced),
-    url(r'^vulnerability/importBatch/$', views.importBatch),
-    url(r'^vulnerability/add/$', views.addVulnerability),
+    url(r'^vulnerability/importDiffBatch/$', views.importDiffBatch),
+    
     url(r'^vulnerability/edit/\??$', views.editVulnerability),
     url(r'^vulnerability/add/result/$', views.add_Save),
     url(r'^login/$', views.login),
-    # url(r'^registration/$', views.registration),
-    url(r'^forum/$', views.forum),
     url(r'^detail/$', views.detailVul),
     url(r'^search/\??$', views.searchVul),
     url(r'^test2/$', views.display_meta),
@@ -45,9 +43,30 @@ urlpatterns = [
     url(r'^Reward/$', views.rewardIndex),
     url(r'^Reward/incompleteList/diff/$', views.rewardIncompleteListDiff),
     url(r'^Reward/incompleteList/diffAdd/$', views.rewardDiffAddToList),
+    
     url(r'^Reward/diffList/$', views.rewardDiffList),
     url(r'^Reward/diffAdd/$', views.rewardDiffAdd),
+    
     url(r'^Reward/incompleteList/exploits/$', views.rewardIncompleteListExploits),
+    url(r'^Reward/incompleteList/exploitsAdd/$', views.rewardExploitsAddToList),
+    url(r'^Reward/exploitsList/$', views.rewardExploitsList),
+    url(r'^Reward/exploitAdd/$', views.rewardExploitsAdd),
+    
     url(r'^Reward/diffCheckList/$', views.rewardDiffCheckList),
     url(r'^Reward/diffCheck/$', views.diffCheck),
+    url(r'^Reward/exploitCheckList/$', views.rewardExploitCheckList),
+    url(r'^Reward/exploitCheck/$', views.exploitCheck),
+    
+    url(r'^Reward/checkList/$', views.rewardCheckList),
+    url(r'^Reward/infoCheckList/$', views.rewardInfoCheckList),
+    
+    url(r'^userInformation/$', views.userInfomation),
+    url(r'^vulnerability/importDiff/$', views.importDiff),
+    
+    url(r'^Reward/incompleteList/cves/$', views.rewardIncompleteListCVE),
+    url(r'^Reward/incompleteList/cveAdd/$', views.rewardCVEAddToList),
+    url(r'^Reward/CVEList/$', views.rewardCVEList),
+    url(r'^Reward/CVEAdd/$', views.rewardCVEAdd),
+    url(r'^Reward/CVECheckList/$', views.rewardCVECheckList),
+    url(r'^Reward/CVECheck/$', views.CVECheck),
 ]
